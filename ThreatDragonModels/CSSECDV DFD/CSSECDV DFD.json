@@ -319,40 +319,6 @@
             "labels": [
               "Trust Boundary"
             ],
-            "id": "93f30083-b4a6-4d9c-acac-cccefdb402f7",
-            "source": {
-              "x": 340,
-              "y": 140
-            },
-            "target": {
-              "x": 750,
-              "y": 150
-            },
-            "vertices": [
-              {
-                "x": 700,
-                "y": 200
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Trust Boundary"
-            ],
             "id": "ea561de8-4502-4b52-bd2b-41de2f5b95ee",
             "source": {
               "x": 530,
@@ -718,78 +684,6 @@
             ]
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Verified",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Verified"
-            ],
-            "id": "f4b5757d-3691-4df4-a757-a4d3f640acc0",
-            "source": {
-              "x": 560,
-              "y": 70
-            },
-            "target": {
-              "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
-              "port": "7934fc84-019d-4856-a8fc-7a3cc906b323"
-            },
-            "vertices": [
-              {
-                "x": 540,
-                "y": 120
-              },
-              {
-                "x": 540,
-                "y": 230
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Auth Verification",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Auth Verification"
-            ],
-            "id": "f78c3527-1497-4b7e-b5f4-2b7557951a91",
-            "source": {
-              "x": 605,
-              "y": 70
-            },
-            "target": {
-              "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
-              "port": "7934fc84-019d-4856-a8fc-7a3cc906b323"
-            },
-            "vertices": [
-              {
-                "x": 660,
-                "y": 120
-              }
-            ]
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -809,7 +703,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Save Feedback",
+              "name": "Insert query with feedback",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -823,7 +717,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Save Feedback"
+              "Insert query with feedback"
             ],
             "id": "54b99f83-b73e-4aee-9e49-ce38ba04baa8",
             "source": {
@@ -1365,6 +1259,132 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 17,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "93f30083-b4a6-4d9c-acac-cccefdb402f7",
+            "source": {
+              "x": 360,
+              "y": 80
+            },
+            "target": {
+              "x": 770,
+              "y": 90
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 140
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 18,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verified",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Verified"
+            ],
+            "id": "a2a588a1-e374-42fd-b39b-13b0906ce29b",
+            "source": {
+              "x": 590,
+              "y": 70
+            },
+            "target": {
+              "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
+              "port": "7934fc84-019d-4856-a8fc-7a3cc906b323"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 19,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "8d2f3e7c-2d59-4230-9ab6-87c39977fc5a",
+            "source": {
+              "x": 611,
+              "y": 370
+            },
+            "target": {
+              "x": 650,
+              "y": 90
             }
           }
         ]
