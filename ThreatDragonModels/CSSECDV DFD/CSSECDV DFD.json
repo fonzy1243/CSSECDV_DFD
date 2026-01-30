@@ -1041,13 +1041,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1239,14 +1232,18 @@
             ],
             "id": "a2a588a1-e374-42fd-b39b-13b0906ce29b",
             "source": {
-              "x": 590,
-              "y": 70
+              "cell": "70a739bf-018a-4c5b-835a-7e49cc461570",
+              "port": "57ccf04a-baf4-4fad-9f6b-9566006f4cdf"
             },
             "target": {
               "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
               "port": "7934fc84-019d-4856-a8fc-7a3cc906b323"
             },
             "vertices": [
+              {
+                "x": 570,
+                "y": 110
+              },
               {
                 "x": 550,
                 "y": 200
