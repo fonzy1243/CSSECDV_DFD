@@ -163,44 +163,6 @@
             "labels": [
               "Trust Boundary"
             ],
-            "id": "ea561de8-4502-4b52-bd2b-41de2f5b95ee",
-            "source": {
-              "x": 530,
-              "y": 30
-            },
-            "target": {
-              "x": 490,
-              "y": 550
-            },
-            "vertices": [
-              {
-                "x": 490,
-                "y": 90
-              },
-              {
-                "x": 440,
-                "y": 290
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Trust Boundary"
-            ],
             "id": "fc3ec024-37ab-4ff1-a8f6-f300e7e4b281",
             "source": {
               "x": 880,
@@ -594,7 +556,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Verification request",
+              "name": "Verification status",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -608,25 +570,25 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Verification request"
+              "Verification status"
             ],
-            "id": "754c0d52-a27e-4732-845b-e7586b1a5b1b",
+            "id": "a2f0548e-2f64-413e-9e07-a8bbe205e600",
             "source": {
-              "x": 660,
-              "y": 33
+              "x": 876,
+              "y": 63
             },
             "target": {
-              "cell": "5ca5ef2c-d74a-476d-9f80-ce3b075ddcc0",
-              "port": "c40119b9-d12f-4436-bde6-2980fdf08f7d"
+              "cell": "70a739bf-018a-4c5b-835a-7e49cc461570",
+              "port": "40924346-20d4-4d42-b723-7e43e98e69ec"
             },
             "vertices": [
               {
-                "x": 730,
-                "y": 10
+                "x": 770,
+                "y": 90
               },
               {
-                "x": 830,
-                "y": 10
+                "x": 750,
+                "y": 90
               }
             ]
           },
@@ -650,7 +612,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Verification status",
+              "name": "Privilege verification request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -664,25 +626,59 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Verification status"
+              "Privilege verification request"
             ],
-            "id": "a2f0548e-2f64-413e-9e07-a8bbe205e600",
+            "id": "ed16b0ce-9071-4ca3-adf6-4c7af411cd61",
             "source": {
-              "x": 886,
-              "y": 53
+              "x": 660,
+              "y": 47
             },
             "target": {
-              "cell": "70a739bf-018a-4c5b-835a-7e49cc461570",
-              "port": "40924346-20d4-4d42-b723-7e43e98e69ec"
+              "cell": "5ca5ef2c-d74a-476d-9f80-ce3b075ddcc0",
+              "port": "c40119b9-d12f-4436-bde6-2980fdf08f7d"
             },
             "vertices": [
               {
                 "x": 780,
+                "y": 20
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "ea561de8-4502-4b52-bd2b-41de2f5b95ee",
+            "source": {
+              "x": 470,
+              "y": 10
+            },
+            "target": {
+              "x": 490,
+              "y": 550
+            },
+            "vertices": [
+              {
+                "x": 470,
                 "y": 80
               },
               {
-                "x": 760,
-                "y": 80
+                "x": 440,
+                "y": 290
               }
             ]
           },
@@ -929,12 +925,12 @@
               "y": 430
             },
             "size": {
-              "width": 120,
+              "width": 140,
               "height": 60
             },
             "attrs": {
               "text": {
-                "text": "SQL Databas"
+                "text": "SQL Database"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -1045,15 +1041,22 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
             "position": {
-              "x": 544,
-              "y": 9
+              "x": 500,
+              "y": 20
             },
             "size": {
-              "width": 112.5,
+              "width": 160,
               "height": 60
             },
             "attrs": {
@@ -1288,8 +1291,8 @@
             ],
             "id": "8d2f3e7c-2d59-4230-9ab6-87c39977fc5a",
             "source": {
-              "x": 611,
-              "y": 370
+              "x": 601,
+              "y": 380
             },
             "target": {
               "cell": "70a739bf-018a-4c5b-835a-7e49cc461570",
@@ -1297,8 +1300,8 @@
             },
             "vertices": [
               {
-                "x": 670,
-                "y": 190
+                "x": 660,
+                "y": 200
               }
             ]
           },
