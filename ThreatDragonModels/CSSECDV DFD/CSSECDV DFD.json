@@ -319,40 +319,6 @@
             "labels": [
               "Trust Boundary"
             ],
-            "id": "93f30083-b4a6-4d9c-acac-cccefdb402f7",
-            "source": {
-              "x": 340,
-              "y": 140
-            },
-            "target": {
-              "x": 750,
-              "y": 150
-            },
-            "vertices": [
-              {
-                "x": 580,
-                "y": 180
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false,
-              "crossingFlows": [],
-              "containedElements": []
-            },
-            "labels": [
-              "Trust Boundary"
-            ],
             "id": "ea561de8-4502-4b52-bd2b-41de2f5b95ee",
             "source": {
               "x": 530,
@@ -977,6 +943,44 @@
               {
                 "x": 750,
                 "y": 500
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "93f30083-b4a6-4d9c-acac-cccefdb402f7",
+            "source": {
+              "x": 340,
+              "y": 140
+            },
+            "target": {
+              "x": 1030,
+              "y": 170
+            },
+            "vertices": [
+              {
+                "x": 580,
+                "y": 180
+              },
+              {
+                "x": 820,
+                "y": 180
               }
             ]
           },
