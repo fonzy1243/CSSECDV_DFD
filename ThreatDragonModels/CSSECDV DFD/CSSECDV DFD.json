@@ -1047,6 +1047,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1130,7 +1131,6 @@
               ]
             },
             "id": "6a99f570-2c4d-4b70-8786-1212abfe4d1a",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
               "name": "SQL Database",
@@ -1157,6 +1157,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Authorization Provider"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1165,6 +1168,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1248,10 +1252,9 @@
               ]
             },
             "id": "70a739bf-018a-4c5b-835a-7e49cc461570",
-            "zIndex": 16,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Authorization Provider",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1259,6 +1262,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1285,15 +1295,125 @@
               "y": 80
             },
             "target": {
-              "x": 770,
-              "y": 90
+              "x": 830,
+              "y": 40
             },
             "vertices": [
               {
                 "x": 720,
                 "y": 140
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -1339,7 +1459,13 @@
             "target": {
               "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
               "port": "7934fc84-019d-4856-a8fc-7a3cc906b323"
-            }
+            },
+            "vertices": [
+              {
+                "x": 550,
+                "y": 200
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1383,9 +1509,15 @@
               "y": 370
             },
             "target": {
-              "x": 650,
-              "y": 90
-            }
+              "cell": "70a739bf-018a-4c5b-835a-7e49cc461570",
+              "port": "57ccf04a-baf4-4fad-9f6b-9566006f4cdf"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 190
+              }
+            ]
           }
         ]
       }
