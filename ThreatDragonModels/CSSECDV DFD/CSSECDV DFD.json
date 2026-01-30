@@ -1298,12 +1298,6 @@
               "x": 830,
               "y": 40
             },
-            "vertices": [
-              {
-                "x": 720,
-                "y": 140
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -1413,7 +1407,13 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 140
+              }
+            ]
           },
           {
             "shape": "flow",
