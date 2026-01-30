@@ -1323,6 +1323,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 20,
             "ports": {
               "groups": {
                 "top": {
@@ -1406,7 +1407,6 @@
               ]
             },
             "id": "5ca5ef2c-d74a-476d-9f80-ce3b075ddcc0",
-            "zIndex": 20,
             "data": {
               "type": "tm.Actor",
               "name": "LDAP",
