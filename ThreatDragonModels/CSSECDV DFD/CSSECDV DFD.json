@@ -31,8 +31,8 @@
                 "text": "Web application"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -129,16 +129,43 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "867fd8c5-5214-4a3a-8234-9a0d5834d7cc",
+                  "title": "Web Application Spoofing",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "The web application may be spoofed by an attacker and this may lead to unauthorized access to the browser client.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "9bdfd09a-9e9d-495d-b83b-d095d7e6a9f0",
+                  "title": "Missing Web Application Login",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "The web application claims that it did not receive data from a process on the other side of the trust boundary.",
+                  "mitigation": "Consider using logging or auditing to record the source, time and a summary of the received data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
               "threatFrequency": {
-                "spoofing": 0,
+                "spoofing": 1,
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -328,58 +355,6 @@
               "cell": "211fd8af-a927-42f2-98ff-0c6cce7c7430",
               "port": "4d132f40-0738-4495-9fe0-775d7020becb"
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Insert Feedback Comments",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Insert Feedback Comments"
-            ],
-            "id": "79291357-7e88-410e-989e-b049de5612a2",
-            "source": {
-              "cell": "211fd8af-a927-42f2-98ff-0c6cce7c7430",
-              "port": "d6944af9-953d-4cce-8ae4-63de0263a870"
-            },
-            "target": {
-              "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
-              "port": "c3089c12-3e56-466b-a25d-32cc65187589"
-            },
-            "vertices": [
-              {
-                "x": 370,
-                "y": 370
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -593,58 +568,6 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Privilege verification request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Privilege verification request"
-            ],
-            "id": "ed16b0ce-9071-4ca3-adf6-4c7af411cd61",
-            "source": {
-              "x": 660,
-              "y": 47
-            },
-            "target": {
-              "cell": "5ca5ef2c-d74a-476d-9f80-ce3b075ddcc0",
-              "port": "c40119b9-d12f-4436-bde6-2980fdf08f7d"
-            },
-            "vertices": [
-              {
-                "x": 780,
-                "y": 20
-              }
-            ]
-          },
-          {
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
@@ -679,6 +602,103 @@
               {
                 "x": 440,
                 "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Insert Feedback Comments",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "650f6c86-0ccf-4853-a67a-b1dec9fe50ef",
+                  "title": "Feedback Data Tampering",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Data flowing across saved feedback comments may be tampered with by an attacker. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues.",
+                  "mitigation": "Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved-list input validation approach.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "a0634f10-f4a4-4d13-9c27-06cd32e39c63",
+                  "title": "Sensitive Feedback Data Disclosure",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Data flowing across saved feedback comments may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations.",
+                  "mitigation": "Consider encrypting the data flow.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Insert Feedback Comments"
+            ],
+            "id": "79291357-7e88-410e-989e-b049de5612a2",
+            "source": {
+              "cell": "211fd8af-a927-42f2-98ff-0c6cce7c7430",
+              "port": "d6944af9-953d-4cce-8ae4-63de0263a870"
+            },
+            "target": {
+              "cell": "64ce161f-01ad-473c-93d8-552a711b389e",
+              "port": "c3089c12-3e56-466b-a25d-32cc65187589"
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 410
+              },
+              {
+                "x": 320,
+                "y": 370
+              },
+              {
+                "x": 370,
+                "y": 370
+              },
+              {
+                "x": 520,
+                "y": 430
               }
             ]
           },
@@ -933,11 +953,13 @@
                 "text": "SQL Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1034,13 +1056,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "2b4a4843-80f0-4fc9-8e82-9d164f90b17b",
+                  "title": "Malicious SQL Code Injection",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "SQL injection is an attack in which malicious code is\ninserted into strings that are later passed to an instance of SQL Server for parsing and execution.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "384d7461-d06c-481f-a967-7bc419f01ee7",
+                  "title": "Unverified SQL Database Data Writes",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "The SQL Database claims that it did not write data received from an entity on the other side of the trust boundary.",
+                  "mitigation": "Consider using logging or auditing to record the source, time and a summary of the received data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1304,11 +1359,11 @@
           },
           {
             "position": {
-              "x": 890,
-              "y": 20
+              "x": 880,
+              "y": 30
             },
             "size": {
-              "width": 112.5,
+              "width": 60,
               "height": 60
             },
             "attrs": {
@@ -1316,14 +1371,13 @@
                 "text": "LDAP"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
-            "shape": "actor",
-            "zIndex": 20,
+            "shape": "process",
             "ports": {
               "groups": {
                 "top": {
@@ -1390,40 +1444,151 @@
               "items": [
                 {
                   "group": "top",
-                  "id": "2713073a-4f4b-4df4-b937-ae7b3a99eb77"
+                  "id": "e4c4d6b2-46df-463c-9e6a-24871b857f13"
                 },
                 {
                   "group": "right",
-                  "id": "4b0d710c-0a4b-4115-b7eb-fec6448de1f3"
+                  "id": "ed91d7a9-ec81-4894-ba23-606896da4471"
                 },
                 {
                   "group": "bottom",
-                  "id": "89f78a5c-0b83-4490-a0b2-c0668a0a5376"
+                  "id": "06a463fe-a69c-4dea-b521-96255829ab44"
                 },
                 {
                   "group": "left",
-                  "id": "c40119b9-d12f-4436-bde6-2980fdf08f7d"
+                  "id": "055da2ad-b8dd-4f7a-af23-50489f704538"
                 }
               ]
             },
-            "id": "5ca5ef2c-d74a-476d-9f80-ce3b075ddcc0",
+            "id": "8a765004-c7a0-4d27-b2f8-2938206dc001",
+            "zIndex": 21,
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Process",
               "name": "LDAP",
               "description": "",
-              "isTrustBoundary": false,
               "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "563b23b6-f646-4240-8600-fa5db9a10754",
+                  "title": "LDAP Injection",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "LDAP injection is possible, as the user authentication is verified using an LDAP query.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "a8c23e6c-2094-4f96-8f95-b8dcd1a62e70",
+                  "title": "Missing LDAP Write Logging",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "LDAP claims that it did not write data received from an entity on the other side of the trust boundary.",
+                  "mitigation": "Consider using logging or auditing to record the source, time and a summary of the received data",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "fd6e79e6-0b7b-4f73-a010-bae42bccd438",
+                  "title": "Unauthorized Data Access in LDAP Directory",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Improper data protection of LDAP can allow an\nattacker to read information not intended for disclosure.",
+                  "mitigation": "Review authorization settings",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Privilege verification request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
-            }
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Privilege verification request"
+            ],
+            "id": "ed16b0ce-9071-4ca3-adf6-4c7af411cd61",
+            "source": {
+              "x": 670,
+              "y": 47
+            },
+            "target": {
+              "cell": "8a765004-c7a0-4d27-b2f8-2938206dc001",
+              "port": "055da2ad-b8dd-4f7a-af23-50489f704538"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 20
+              }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 7
+    "threatTop": 19
   }
 }
