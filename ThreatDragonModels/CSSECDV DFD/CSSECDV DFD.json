@@ -142,7 +142,7 @@
                   "severity": "TBD",
                   "type": "Spoofing",
                   "description": "The web application may be spoofed by an attacker and this may lead to unauthorized access to the browser client.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
@@ -163,7 +163,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 1,
                 "informationDisclosure": 0,
@@ -1070,7 +1070,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "SQL injection is an attack in which malicious code is\ninserted into strings that are later passed to an instance of SQL Server for parsing and execution.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
@@ -1091,7 +1091,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 0
@@ -1378,6 +1378,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -1461,7 +1462,6 @@
               ]
             },
             "id": "8a765004-c7a0-4d27-b2f8-2938206dc001",
-            "zIndex": 21,
             "data": {
               "type": "tm.Process",
               "name": "LDAP",
@@ -1482,7 +1482,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "LDAP injection is possible, as the user authentication is verified using an LDAP query.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 12,
@@ -1517,12 +1517,21 @@
               ],
               "threatFrequency": {
                 "spoofing": 1,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 1,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
